@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSPR | Race, Share, Connect</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand">
+      <img src="logo.svg" alt="DSPR logo" class="logo" />
+      <div>
+        <h1>DSPR</h1>
+        <p>Drive social power. Post your rides, meet the crew.</p>
+      </div>
+    </div>
+    <nav>
+      <button id="show-login" class="nav-button active">Login</button>
+      <button id="show-signup" class="nav-button">Sign Up</button>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <section class="hero">
+      <h2>Video game car community</h2>
+      <p>Share your favorite ride screenshots, create a profile, and connect with other drivers in a retro-inspired social feed.</p>
+      <div class="hero-actions">
+        <button id="show-signup-cta">Get Started</button>
+        <a href="#feed">Browse the feed</a>
+      </div>
+    </section>
+
+    <section class="forms-panel">
+      <div id="login-panel" class="card auth-card">
+        <h3>Login</h3>
+        <form id="login-form">
+          <label>Username<input name="username" required /></label>
+          <label>Password<input name="password" type="password" required /></label>
+          <button type="submit">Login</button>
+          <p class="hint">Need a profile? <button type="button" class="link-button" id="switch-to-signup">Sign up</button></p>
+        </form>
+      </div>
+
+      <div id="signup-panel" class="card auth-card hidden">
+        <h3>Create your DSPR ride</h3>
+        <form id="signup-form">
+          <label>Display name<input name="name" /></label>
+          <label>Username<input name="username" required /></label>
+          <label>Password<input name="password" type="password" required /></label>
+          <button type="submit">Create account</button>
+          <p class="hint">Already riding? <button type="button" class="link-button" id="switch-to-login">Login</button></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="card upload-card hidden" id="upload-card">
+      <div class="card-header">
+        <div>
+          <h3>Create a Post</h3>
+          <p>Upload a screenshot of your car and share a quick caption.</p>
+        </div>
+        <button id="logout-button" class="ghost-button">Logout</button>
+      </div>
+      <form id="upload-form" enctype="multipart/form-data">
+        <label>Ride photo<input name="image" type="file" accept="image/*" required /></label>
+        <label>Caption<input name="caption" maxlength="120" placeholder="Street racer vibes, drift runs, or custom paint." /></label>
+        <button type="submit">Post to DSPR</button>
+      </form>
+    </section>
+
+    <section id="feed" class="feed-section">
+      <div class="section-header">
+        <h2>Latest DSPR posts</h2>
+        <p>Follow what other drivers are sharing right now.</p>
+      </div>
+      <div id="posts" class="posts-grid"></div>
+      <div id="empty-state" class="empty-state hidden">
+        <p>No posts yet. Start by creating your profile and uploading a ride.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>DSPR is a stylish car social hub built for posting rides, profiles, and community stories.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

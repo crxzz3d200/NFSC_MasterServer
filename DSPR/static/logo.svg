@@ -1,0 +1,14 @@
+<svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff5f8c" />
+      <stop offset="100%" stop-color="#5f8cff" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="160" height="60" rx="16" fill="#101423" />
+  <path d="M18 42L38 18H48L28 42H18Z" fill="url(#glow)" opacity="0.96"/>
+  <path d="M54 18H74L64 42H54V18Z" fill="#dae1f0" />
+  <path d="M82 18H96L108 42H98L94 34H80L76 42H66L80 18Z" fill="#dae1f0" />
+  <path d="M118 18H138L134 30L142 42H132L130 36H120L118 42H108L118 18Z" fill="url(#glow)" opacity="0.96" />
+  <text x="18" y="56" fill="#e8eff8" font-family="Segoe UI, Arial, sans-serif" font-size="10">DSPR</text>
+</svg>
